@@ -3,6 +3,7 @@ import SwiftUI
 struct FilterView: View {
     
     @State var titles = ["CATEGORY", "COMPATIBLE WITH", "METAL", "COLOUR", "COLLECTION", "THEME", "SIZE", "PRIZE"]
+    @Binding var isPresented: Bool
     
     var body: some View {
         VStack (alignment: .leading) {
@@ -31,7 +32,9 @@ struct FilterView: View {
             
             Spacer()
             
-            Button(action: {}, label: {
+            Button(action: {
+                isPresented.toggle()
+            }, label: {
                 Text("Apply")
                     .foregroundColor(.white)
                     .padding(10)
@@ -44,6 +47,6 @@ struct FilterView: View {
     }
 }
 
-#Preview {
-    FilterView()
-}
+//#Preview {
+//    FilterView()
+//}

@@ -14,26 +14,29 @@ struct CategoryView: View {
     }
     
     var body: some View {
-        SearchBar(searchText: $searchText, isSearching: $isSearching)
         ScrollView(.vertical) {
+            SearchBar(searchText: $searchText, isSearching: $isSearching)
             VStack(alignment: .center){
                 LazyVGrid(columns: [GridItem(.fixed(150)), GridItem(.fixed(150))], spacing: 15) {
                     ForEach(filteredCategories, id: \.id){ category in
-                        Rectangle()
-                            .frame(width: 140, height: 150)
-                            .border(.black)
-                            .foregroundStyle(Color("category_item_bg"))
-                            .overlay {
-                                VStack(alignment: .center){
-                                    Image(category.image)
-                                        .resizable()
-                                        .aspectRatio(contentMode: .fit)
-                                        .frame(width: 100)
-                                    Text(category.name)
-                                    Rectangle()
-                                        .frame(width: 80,height: 1)
+                        NavigationLink(value: "GoToBracelets") {
+                            Rectangle()
+                                .frame(width: 140, height: 150)
+                                .border(.black)
+                                .foregroundStyle(Color("category_item_bg"))
+                                .overlay {
+                                    VStack(alignment: .center){
+                                        Image(category.image)
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 100)
+                                        Text(category.name)
+                                        Rectangle()
+                                            .frame(width: 80,height: 1)
+                                    }
                                 }
-                            }
+                        }.foregroundStyle(.black)
+                        
                         
                     }
                 }
@@ -89,12 +92,12 @@ struct CategoryView: View {
         
         .navigationTitle("Discover a world of jewellery")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(false)
         .font(.system(size: 19))
     }
 }
 
 #Preview {
-    NavigationStack{
-        CategoryView()
-    }
+    CategoryView()
+    
 }

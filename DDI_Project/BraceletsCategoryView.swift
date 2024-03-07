@@ -7,6 +7,7 @@ struct BraceletsCategoryView: View {
     ]
     @State var bracelets: [ItemModel] = ItemData.bracelets
     @State private var selectedCategory: String = "New"
+    @State var isPresented = false
     
     var body: some View {
         
@@ -36,10 +37,15 @@ struct BraceletsCategoryView: View {
                     .foregroundStyle(.white)
                     .border(Color.black)
                     .overlay {
-                        HStack{
-                            Image("filter_icon")
-                            Text("Filter")
-                        }
+                        Button(action: {
+                            isPresented.toggle()
+                        }, label: {
+                            HStack{
+                                Image("filter_icon")
+                                Text("Filter")
+                            }
+                        }).tint(.black)
+                        
                     }
                 
                 
@@ -77,7 +83,9 @@ struct BraceletsCategoryView: View {
         
         .padding(.vertical)
         
-        
+        .sheet(isPresented: $isPresented, content: {
+            FilterView(isPresented: $isPresented)
+        })
         
     }
 }
