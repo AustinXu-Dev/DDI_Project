@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct ItemDetailView: View {
+    @Binding var path: [String]
+
     var body: some View {
         ScrollView {
             VStack(alignment: .center, spacing: 20){
@@ -69,13 +71,15 @@ struct ItemDetailView: View {
                 }.padding(.leading, 20)
                 
                 HStack{
-                    Rectangle()
-                        .frame(width: 300, height: 40)
-                        .foregroundStyle(.black.opacity(0.7))
-                        .overlay {
-                            Text("ADD TO BAG")
-                                .foregroundStyle(.white)
-                        }
+                    NavigationLink(value: "GoToCheckout") {
+                        Rectangle()
+                            .frame(width: 300, height: 40)
+                            .foregroundStyle(.black.opacity(0.7))
+                            .overlay {
+                                Text("ADD TO BAG")
+                                    .foregroundStyle(.white)
+                            }
+                    }
                     Rectangle()
                         .frame(width: 50, height: 40)
                         .foregroundStyle(.white)
@@ -156,7 +160,51 @@ struct ItemDetailView: View {
                         Text("ADD TO BAG")
                             .foregroundStyle(.white)
                     }
+                
+                
                 Divider()
+                
+                Text("RELATED CREATIONS")
+                    .font(.system(size: 27, weight: .semibold))
+                    .padding()
+                Text("Get inspired by the other unique designs")
+                    .font(.system(size: 18))
+                    .padding()
+                
+                Image("gift_wrapping")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: 700)
+                
+                VStack(alignment: .leading){
+                    
+                    Text("GIFT WRAPPING")
+                        .font(.system(size: 20, weight: .semibold))
+                        .padding()
+                    
+                    Text("Send your presents in our signature packaging with a personalized greetings card included.")
+                        .font(.system(size: 13))
+                        .padding()
+                    
+                    NavigationLink(value: "ReadMore"){
+                        Text("Read More")
+                            .font(.system(size: 13))
+                            .padding(.horizontal)
+                    }.foregroundStyle(.blue)
+                    
+                }
+                Image("tiger_left")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: 700)
+                
+                DeliveryView()
+                Divider()
+                BottomView()
+                Image("footer")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(maxWidth: .infinity, maxHeight: 700)
                 
             }
             .frame(maxWidth: .infinity)
@@ -166,5 +214,5 @@ struct ItemDetailView: View {
 }
 
 #Preview {
-    ItemDetailView()
+    ItemDetailView(path: .constant([]))
 }

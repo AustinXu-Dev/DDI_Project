@@ -1,6 +1,10 @@
 import SwiftUI
 
 struct ShoppingBagView: View {
+    
+    @State var titles = ["checkoutOne", "checkoutTwo"]
+    @Binding var path: [String]
+
     var body: some View {
         ScrollView {
             HStack{
@@ -24,13 +28,65 @@ struct ShoppingBagView: View {
                         .foregroundStyle(.black.opacity(0.7))
                         .padding(15)
                 }
+            
+            ForEach(titles, id: \.self) { title in
+                HStack (spacing: 20){
+                    Image(title)
+                    VStack (alignment : .leading) {
+                        Text("LEVE NECK-LACE, 2 DIA- MONDS")
+                        Text("Rose, gold, diamonds")
+                            .font(.caption)
+                        Text("THB 93,000")
+                    }
+                }
+            }
+            
+            HStack (spacing: 20){
+                Image("checkoutThree")
+                VStack (alignment : .leading) {
+                    Text("TRINITY BRACELET")
+                    Text("gold")
+                        .font(.caption)
+                    Text("THB 57,000")
+                }
+            }
+            Divider()
+            
+            VStack (alignment: .leading) {
+                HStack {
+                    Text("SUBTOTAL")
+                    Spacer()
+                    Text("THB 292,800")
+                        .bold()
+                }
+                .padding([.top, .leading, .trailing])
+                
+                Text("Shipping and taxes calculated at checkout")
+                    .font(.caption2)
+                    .foregroundColor(.gray)
+                    .padding(.leading)
+            }
+            
+            NavigationLink(value: "Success") {
+                Text("PROCEED TO CHECKOUT")
+                    .padding(10)
+                    .foregroundColor(.white)
+                    .background(.black.opacity(0.8))
+                    .padding()
+            }
+            
             Text("Kindly note that the purchase has reached THB 100,000, therefore we are required under the law to collect additional information before the transaction can be concluded.")
                 .font(.system(size: 14))
                 .foregroundStyle(.black.opacity(0.7))
                 .padding(15)
             
-            Text("BACK TO SHOPPING")
-                .font(.system(size: 13, weight: .semibold))
+            Button(action: {
+                path.removeAll()
+            }, label: {
+                Text("BACK TO SHOPPING")
+                    .font(.system(size: 13, weight: .semibold))
+            })
+            
                 
             
             VStack(alignment: .leading){
@@ -40,8 +96,11 @@ struct ShoppingBagView: View {
                             .font(.system(size: 15, weight: .semibold))
                         Text("We provide high-standard complimentary delivery with nationwide insurance coverage.")
                             .font(.system(size: 14))
-                        Text("View Delivery")
-                            .font(.system(size: 15, weight: .semibold))
+                        NavigationLink(value: "DeliveryReadMore") {
+                            Text("View Delivery")
+                                .font(.system(size: 15, weight: .semibold))
+                        }.foregroundStyle(.black)
+                        
                     }
                     Spacer()
                 }.padding()
@@ -79,5 +138,5 @@ struct ShoppingBagView: View {
 }
 
 #Preview {
-    ShoppingBagView()
+    ShoppingBagView(path: .constant([]))
 }

@@ -7,6 +7,7 @@ struct CategoryView: View {
     @State var isFavourite: Bool = false
     @State var searchText = ""
     @State var isSearching = false
+    @Binding var path: [String]
     
     var filteredCategories: [CategoryModel] {
         guard !searchText.isEmpty else {return categories}
@@ -44,45 +45,45 @@ struct CategoryView: View {
             Spacer().frame(height: 20)
             VStack(alignment: .leading){
                 
-//                HStack {
-                    Text("RECOMMENDED FOR YOU")
-                        .frame(alignment: .leading)
-                        .padding(.leading, 20)
-                        .padding(.vertical)
-                        .font(.system(size: 19))
-//                    Spacer()
-//                }
-                                
+                Text("RECOMMENDED FOR YOU")
+                    .frame(alignment: .leading)
+                    .padding(.leading, 20)
+                    .padding(.vertical)
+                    .font(.system(size: 19))
+
                 LazyVGrid(columns: [GridItem(.fixed(150)), GridItem(.fixed(150))], spacing: 15) {
                     ForEach(items, id: \.id){ item in
-                        VStack(alignment: .center){
-                            ZStack{
-                                Image(item.image)
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: .infinity,height: 130)
-                                    .padding(.bottom, 10)
-                                Image(systemName: "heart")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 15)
-                                    .offset(x: 50, y: 40)
+                        NavigationLink(value: "GoToItemDetail") {
+                            VStack(alignment: .center){
+                                ZStack{
+                                    Image(item.image)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: .infinity,height: 130)
+                                        .padding(.bottom, 10)
+                                    Image(systemName: "heart")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fit)
+                                        .frame(width: 15)
+                                        .offset(x: 50, y: 40)
+                                    
+                                }
                                 
-                            }
-                            
-                            Text(item.name)
-                                .font(.system(size: 10))
-                                .multilineTextAlignment(.leading)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading, 10)
-                            
-                            Text("\(item.price.formatted(.number.precision(.fractionLength(2))))")
-                                .font(.system(size: 10))
-                                .multilineTextAlignment(.leading)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.leading, 10)
-                            Spacer()
-                        }.frame(width: 150, height: 200)
+                                Text(item.name)
+                                    .font(.system(size: 10))
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 10)
+                                
+                                Text("\(item.price.formatted(.number.precision(.fractionLength(2))))")
+                                    .font(.system(size: 10))
+                                    .multilineTextAlignment(.leading)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.leading, 10)
+                                Spacer()
+                            }.frame(width: 150, height: 200)
+                        }.foregroundStyle(.black)
+                        
                     }
                 }
             }
@@ -98,6 +99,5 @@ struct CategoryView: View {
 }
 
 #Preview {
-    CategoryView()
-    
+    CategoryView(path: .constant([]))
 }

@@ -4,7 +4,8 @@ import SwiftUI
 struct CheckoutView: View {
     
     @State var titles = ["checkoutOne", "checkoutTwo"]
-    
+    @Binding var path: [String]
+
     var body: some View {
         ScrollView {
             ZStack {
@@ -57,13 +58,13 @@ struct CheckoutView: View {
                             .padding(.leading)
                     }
                     
-                    Button(action: {}, label: {
+                    NavigationLink(value: "FinalShopping") {
                         Text("PROCEED TO CHECKOUT")
                             .padding(10)
                             .foregroundColor(.white)
                             .background(.black.opacity(0.8))
                             .padding()
-                    })
+                    }
                 }
                 
             }
@@ -72,5 +73,5 @@ struct CheckoutView: View {
 }
 
 #Preview {
-    CheckoutView()
+    CheckoutView(path: .constant([]))
 }

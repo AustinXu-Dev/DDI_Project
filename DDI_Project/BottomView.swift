@@ -6,9 +6,7 @@ struct BottomView: View {
             Text("SUBSCRIBE TO OUR NEWSLETTER")
                 .bold()
             
-            VStack (alignment: .leading) {
-                Divider()
-                
+            VStack (alignment: .leading) {                
                 VStack {
                       HStack {
                           Text("Email")

@@ -14,13 +14,14 @@
 		392CA5082B9A29B700845313 /* DeliveryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA5072B9A29B700845313 /* DeliveryView.swift */; };
 		392CA50A2B9A2F5C00845313 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA5092B9A2F5C00845313 /* BottomView.swift */; };
 		392CA50E2B9A3F0000845313 /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA50D2B9A3F0000845313 /* FilterView.swift */; };
-		392CA5102B9A432600845313 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA50F2B9A432600845313 /* HistoryView.swift */; };
+		392CA5102B9A432600845313 /* GiftWrappingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA50F2B9A432600845313 /* GiftWrappingView.swift */; };
 		392CA5122B9A4CAF00845313 /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392CA5112B9A4CAF00845313 /* CheckoutView.swift */; };
 		BC26A3E32B9A275300AE3A67 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3E22B9A275300AE3A67 /* ItemModel.swift */; };
 		BC26A3E52B9A34E300AE3A67 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3E42B9A34E300AE3A67 /* SearchBar.swift */; };
 		BC26A3E72B9A37BA00AE3A67 /* ItemDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3E62B9A37BA00AE3A67 /* ItemDetailView.swift */; };
 		BC26A3E92B9A450900AE3A67 /* BraceletsCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3E82B9A450900AE3A67 /* BraceletsCategoryView.swift */; };
 		BC26A3EB2B9A4F4600AE3A67 /* ShoppingBagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3EA2B9A4F4600AE3A67 /* ShoppingBagView.swift */; };
+		BC26A3ED2B9AF2AF00AE3A67 /* DeliveryReadMoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC26A3EC2B9AF2AF00AE3A67 /* DeliveryReadMoreView.swift */; };
 		BC4C877E2B9A1B020035099B /* DDI_ProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C877D2B9A1B020035099B /* DDI_ProjectApp.swift */; };
 		BC4C87802B9A1B020035099B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4C877F2B9A1B020035099B /* ContentView.swift */; };
 		BC4C87822B9A1B030035099B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC4C87812B9A1B030035099B /* Assets.xcassets */; };
@@ -37,13 +38,14 @@
 		392CA5072B9A29B700845313 /* DeliveryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryView.swift; sourceTree = "<group>"; };
 		392CA5092B9A2F5C00845313 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
 		392CA50D2B9A3F0000845313 /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
-		392CA50F2B9A432600845313 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		392CA50F2B9A432600845313 /* GiftWrappingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiftWrappingView.swift; sourceTree = "<group>"; };
 		392CA5112B9A4CAF00845313 /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
 		BC26A3E22B9A275300AE3A67 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		BC26A3E42B9A34E300AE3A67 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		BC26A3E62B9A37BA00AE3A67 /* ItemDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailView.swift; sourceTree = "<group>"; };
 		BC26A3E82B9A450900AE3A67 /* BraceletsCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BraceletsCategoryView.swift; sourceTree = "<group>"; };
 		BC26A3EA2B9A4F4600AE3A67 /* ShoppingBagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingBagView.swift; sourceTree = "<group>"; };
+		BC26A3EC2B9AF2AF00AE3A67 /* DeliveryReadMoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryReadMoreView.swift; sourceTree = "<group>"; };
 		BC4C877A2B9A1B020035099B /* DDI_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DDI_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4C877D2B9A1B020035099B /* DDI_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDI_ProjectApp.swift; sourceTree = "<group>"; };
 		BC4C877F2B9A1B020035099B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,20 +91,21 @@
 				BC4C87992B9A1DAB0035099B /* CategoryView.swift */,
 				BC26A3E82B9A450900AE3A67 /* BraceletsCategoryView.swift */,
 				392CA50D2B9A3F0000845313 /* FilterView.swift */,
+				BC26A3E62B9A37BA00AE3A67 /* ItemDetailView.swift */,
+				392CA50F2B9A432600845313 /* GiftWrappingView.swift */,
+				392CA5112B9A4CAF00845313 /* CheckoutView.swift */,
+				BC26A3EA2B9A4F4600AE3A67 /* ShoppingBagView.swift */,
 				392CA5052B9A269E00845313 /* CardView.swift */,
 				392CA5032B9A1F2B00845313 /* TrintySelctionModel.swift */,
 				392CA5012B9A1E4700845313 /* TrintySelectionView.swift */,
-				392CA5112B9A4CAF00845313 /* CheckoutView.swift */,
 				BC4C87812B9A1B030035099B /* Assets.xcassets */,
 				BC4C87832B9A1B030035099B /* Preview Content */,
-				BC26A3EA2B9A4F4600AE3A67 /* ShoppingBagView.swift */,
-				BC26A3E62B9A37BA00AE3A67 /* ItemDetailView.swift */,
 				BC26A3E42B9A34E300AE3A67 /* SearchBar.swift */,
 				BC26A3E22B9A275300AE3A67 /* ItemModel.swift */,
 				BCC4DF5F2B9A209600E3E672 /* CategoryModel.swift */,
 				392CA5072B9A29B700845313 /* DeliveryView.swift */,
 				392CA5092B9A2F5C00845313 /* BottomView.swift */,
-				392CA50F2B9A432600845313 /* HistoryView.swift */,
+				BC26A3EC2B9AF2AF00AE3A67 /* DeliveryReadMoreView.swift */,
 			);
 			path = DDI_Project;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				BC26A3E32B9A275300AE3A67 /* ItemModel.swift in Sources */,
 				392CA5002B9A1DD600845313 /* HomeView.swift in Sources */,
+				BC26A3ED2B9AF2AF00AE3A67 /* DeliveryReadMoreView.swift in Sources */,
 				392CA5122B9A4CAF00845313 /* CheckoutView.swift in Sources */,
 				392CA5082B9A29B700845313 /* DeliveryView.swift in Sources */,
 				392CA5042B9A1F2B00845313 /* TrintySelctionModel.swift in Sources */,
@@ -200,7 +204,7 @@
 				BC4C877E2B9A1B020035099B /* DDI_ProjectApp.swift in Sources */,
 				BC4C879A2B9A1DAB0035099B /* CategoryView.swift in Sources */,
 				BC26A3E52B9A34E300AE3A67 /* SearchBar.swift in Sources */,
-				392CA5102B9A432600845313 /* HistoryView.swift in Sources */,
+				392CA5102B9A432600845313 /* GiftWrappingView.swift in Sources */,
 				392CA5062B9A269E00845313 /* CardView.swift in Sources */,
 				392CA5022B9A1E4700845313 /* TrintySelectionView.swift in Sources */,
 			);

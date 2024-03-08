@@ -14,10 +14,10 @@ class ItemData{
         ItemModel(name: "24K PINK GOLD EARRINGS", image: "24k_pinkgold",price: 3900.00, isFavourite: false),
         ItemModel(name: "24K PINK GOLD RING", image: "24k_pinkgold_ring",price: 7400.00, isFavourite: false),
         ItemModel(name: "CARTIER BRACELET", image: "cartier_bracelet",price: 4800.00, isFavourite: false),
-        ItemModel(name: "CARTIER JUSTE UN CLOU RING", image: "cartier_juste_un",price: 93000.00, isFavourite: false),
-        ItemModel(name: "CARTIER WEDDING BAND", image: "cartier_wedding",price: 93000.00, isFavourite: false),
-        ItemModel(name: "CARTIER DIAMOND LOVE", image: "cartier_diamond",price: 93000.00, isFavourite: false),
-        ItemModel(name: "CARTIER CHARM", image: "cartier_charm",price: 93000.00, isFavourite: false),
+        ItemModel(name: "CARTIER JUSTE UN CLOU RING", image: "cartier_juste_un",price: 49800.00, isFavourite: false),
+        ItemModel(name: "CARTIER WEDDING BAND", image: "cartier_wedding",price: 4500.00, isFavourite: false),
+        ItemModel(name: "CARTIER DIAMOND LOVE", image: "cartier_diamond",price: 10400.00, isFavourite: false),
+        ItemModel(name: "CARTIER CHARM", image: "cartier_charm",price: 34000.00, isFavourite: false),
     ]
     
     static var bracelets = [
@@ -37,7 +37,5 @@ class ItemData{
         ItemModel(name: "GRAIN DE CAFE BRACELET", image: "14", price: 88000.00),
         ItemModel(name: "PANTHERE DE CARTIER BRACELET", image: "15", price: 75000.00),
         ItemModel(name: "HIGH JEWELLERY BRACELET", image: "16", price: 66000.00),
-
-        
     ]
 }

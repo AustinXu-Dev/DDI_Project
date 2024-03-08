@@ -8,7 +8,8 @@ struct BraceletsCategoryView: View {
     @State var bracelets: [ItemModel] = ItemData.bracelets
     @State private var selectedCategory: String = "New"
     @State var isPresented = false
-    
+    @Binding var path: [String]
+
     var body: some View {
         
         ScrollView{
@@ -91,5 +92,5 @@ struct BraceletsCategoryView: View {
 }
 
 #Preview {
-    BraceletsCategoryView()
+    BraceletsCategoryView(path: .constant([]))
 }

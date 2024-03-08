@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct HistoryView: View {
+struct GiftWrappingView: View {
     var body: some View {
         ScrollView {
             ZStack {
@@ -40,6 +40,10 @@ struct HistoryView: View {
                     .padding(.bottom, 20)
                     
                     BottomView()
+                    Image("footer")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(maxWidth: .infinity, maxHeight: 700)
                 }
             }
 
@@ -48,5 +52,5 @@ struct HistoryView: View {
 }
 
 #Preview {
-    HistoryView()
+    GiftWrappingView()
 }
